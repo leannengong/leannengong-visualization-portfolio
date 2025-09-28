@@ -20,10 +20,13 @@ img{
 .main-nav{
   display: flex;
   justify-content:end;
-  padding: 0.7rem;
+  padding: 1rem 0.7rem;
+  background-color: rgb(235, 243, 242);
 }
 
 .nav-item{
   margin: 0 2rem;
+  color: blue;
+  text-decoration: none;
 }
 
