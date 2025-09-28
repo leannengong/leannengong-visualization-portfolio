@@ -2,31 +2,39 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Nunito';
 }
 
 
-p{
-  font-family: 'Nunito';
+p {
   color: #3d3a3a;
 }
 
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
 
+
 /* nav */
-.main-nav{
+.main-nav {
   display: flex;
-  justify-content:end;
-  padding: 1rem 0.7rem;
-  background-color: rgb(235, 243, 242);
+  justify-content: end;
+  padding: 1.5rem 0.7rem;
+  background-color: rgb(252, 232, 240);
 }
 
-.nav-item{
+.nav-item {
   margin: 0 2rem;
-  color: blue;
+  color: rgb(20, 20, 20);
   text-decoration: none;
+  font-weight:550;
+
 }
 
+/*BODY*/
+
+body{
+  background-color: rgb(250, 246, 241);
+}
