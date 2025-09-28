@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+p{
+  font-family: 'Nunito';
+  color: #3d3a3a;
+}
+
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* nav */
+.main-nav{
+  display: flex;
+  justify-content:end;
+  padding: 0.7rem;
+}
+
+.nav-item{
+  margin: 0 2rem;
+}
+
