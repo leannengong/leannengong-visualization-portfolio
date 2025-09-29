@@ -94,7 +94,9 @@ h3 {
 
 .exp-img{
   border:0.2rem solid #434d20;
-  border-radius: 0.2rem;
+  border-radius: 0.2rem; 
+  width: 60rem;      
+  height: auto; 
 }
 
 .exp-text-container{
@@ -102,6 +104,12 @@ h3 {
 }
 
 .exp-text-container h4{
+  font-size: 2rem;
+  color:#1d1c1c;
+  
+}
+
+.exp-text-container h5{
   font-size: 2rem;
   color:#1d1c1c;
   
