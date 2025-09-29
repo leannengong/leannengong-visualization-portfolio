@@ -8,7 +8,6 @@
 
 p {
   color: #3d3a3a;
-  margin: 0 2rem;
 }
 
 
@@ -51,6 +50,7 @@ body {
   margin: 9.5rem;
 }
 
+
 .visual-button {
   background-color: #e9839d;
   text-align: center;
@@ -65,11 +65,16 @@ h1 {
   color: #3d3a3a;
 }
 
+/*EDUCATION SECTION */
 .education-skills-section {
   background-color: rgb(252, 232, 240);
   display: flex;
   justify-content: center;
   padding: 10rem 30rem;
+}
+
+.education-skills-section p{
+  margin: 0 2rem;
 }
 
 h2,
@@ -78,13 +83,36 @@ h3 {
   color: #E9839D;
 }
 
+
+/*EXPERIENCE SECTION */
 .experience-section{
   display: flex;
   justify-content: center;
-  padding: 10rem 30rem;
+  padding: 10rem 17rem;
+  background-color: #d1dab5;
+}
 
+.exp-img{
+  border:0.2rem solid #434d20;
+  border-radius: 0.2rem;
+}
+
+.exp-text-container{
+  margin: 0 7rem;
+}
+
+.exp-text-container h4{
+  font-size: 2rem;
+  color:#1d1c1c;
+  
+}
+
+.exp-description{
+  margin: 2rem 0;
+  
 
 }
+
 
 
 
@@ -94,7 +122,7 @@ h3 {
 /*FOOTER CONTACT SECTION*/
 .footer-content{
   text-align: center;
-  background-color: #9fa881;
+  background-color: rgb(252, 232, 240);
   padding: 1.3rem 0;
-  border-top: 0.1rem solid #434d20;
+  border-top: 0.1rem solid #E9839D;
 }
