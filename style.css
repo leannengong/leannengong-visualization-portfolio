@@ -78,7 +78,20 @@ h3 {
   color: #E9839D;
 }
 
+.experience-section{
+  display: flex;
+  justify-content: center;
+  padding: 10rem 30rem;
 
+
+}
+
+
+
+
+
+
+/*FOOTER CONTACT SECTION*/
 .footer-content{
   text-align: center;
   background-color: #9fa881;
