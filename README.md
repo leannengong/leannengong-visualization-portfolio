@@ -13,5 +13,5 @@ A pink section area shows my education/courses and skills, then you can scroll d
 
 At the very bottom of the page is the footer with shows my contact information.
 
-Clicking the visualizations page leads to the visualizations.html page that displays the two SVG visualizations. 
+Clicking the visualizations page leads to the visualizations.html page that displays the two SVG visualizations. The first is a bar graph showing times i played a game, and the second is a flower where you can hover to change the petal colours.
 

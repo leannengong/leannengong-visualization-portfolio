@@ -140,13 +140,26 @@ h3 {
 
 /* Visualizations */
 
-.visBarGraph {
+.visBarGraph, .visDrawing {
   display: grid;
   justify-content: center;
   margin: 2rem 0;
 }
 
-.visBarGraph h1 {
+.visBarGraph h1, .visDrawing h2{
   text-align: center;
   font-size: 2rem;
+  color:#3d3a3a
 }
+
+.visDrawing{
+  margin-top: 10rem;
+}
+
+.visDrawing p{
+  text-align: center;
+}
+
+
+
+
