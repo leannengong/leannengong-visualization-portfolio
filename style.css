@@ -16,11 +16,6 @@ img {
   height: auto;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-}
-
 
 /* NAV */
 .main-nav {
@@ -138,7 +133,7 @@ h3 {
 }
 
 
-/* Visualizations */
+/* VISUALIZATIONS */
 
 .visBarGraph, .visDrawing {
   display: grid;
@@ -158,6 +153,30 @@ h3 {
 
 .visDrawing p{
   text-align: center;
+}
+
+/* GRIDS & RESPONSIVENESS*/
+.grid {
+  display: grid;
+}
+
+.onecolumn {
+  grid-template-columns: 1fr;
+}
+
+/* navbar responsiveness 320px */
+@media(max-width:576px) {
+  .main-nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width:325px) {
+  .main-nav{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 
