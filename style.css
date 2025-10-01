@@ -44,10 +44,11 @@ body {
   background-color: rgb(250, 246, 241);
 }
 
-.about {
+#about {
   padding: 10rem 0;
   place-items: center;
   margin: 9.5rem;
+  display: grid;
 }
 
 
@@ -85,7 +86,7 @@ h3 {
 
 
 /*EXPERIENCE SECTION */
-.experience-section{
+#experience-section{
   display: flex;
   justify-content: center;
   padding: 10rem 17rem;
