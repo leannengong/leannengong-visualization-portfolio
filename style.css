@@ -165,6 +165,21 @@ h3 {
 }
 
 /* navbar responsiveness 320px */
+
+@media(max-width:900px) {
+  #about{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+    place-items:unset;  
+  }
+
+  #about .visual-button{
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+
+ 
+}
 @media(max-width:576px) {
   .main-nav{
     display: grid;
@@ -177,6 +192,8 @@ h3 {
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+
 }
 
 
