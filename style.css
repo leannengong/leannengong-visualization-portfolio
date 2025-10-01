@@ -136,3 +136,16 @@ h3 {
   border-top: 0.1rem solid #E9839D;
 }
 
+
+/* Visualizations */
+
+.visBarGraph{
+  display: grid;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.visBarGraph h1{
+  text-align: center;
+  font-size: 2rem;
+}
