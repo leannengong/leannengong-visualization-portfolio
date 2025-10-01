@@ -1,7 +1,7 @@
   // Data Collected with the Day of Week, Number of Times, and Colour
   // Resources: https://clementbenezech.hashnode.dev/creating-a-bar-chart-component-with-svg-and-javascript
   // https://www.geeksforgeeks.org/css/how-to-make-charts-with-svg/
-  
+
   // Create an array with 7 objects (each day)
   const data = [
     { label: "Mon", value: 2, color: "#fabacaff" },
@@ -63,3 +63,51 @@
 
     
   });
+
+// ---------------------------------------------
+// visualization drawing 
+
+  //we make a fucntion because we can't declare 2 svg if const 
+  function drawFlower() {
+    const svg = document.getElementById("flowerSVG"); //find where to target to draw the flower 
+    const centerX = 150; //location x and y to draw the flower
+    const centerY = 150;
+
+
+  // we want to make petals repeatedly so we make for loop
+    const numberOfPetals = 8; // we want 8 pedals
+    const petalsData = []; //empty array to store the petals
+
+    for (let i = 0; i < numberOfPetals; i++) {
+      const angle = (360 / numberOfPetals) * i; 
+      petalsData.push({ angle });
+    }
+
+    // draw the petals
+    petalsData.forEach((p, i) => {
+      const petal = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+      petal.setAttribute("cx", centerX);
+      petal.setAttribute("cy", centerY - 50); 
+      petal.setAttribute("rx", 20);
+      petal.setAttribute("ry", 40);
+      petal.setAttribute("fill", "#fcb7d9ff");
+      petal.setAttribute("id", "petal" + i);
+
+    // Rotate the petals around the centre 
+    petal.setAttribute("transform", `rotate(${p.angle} ${centerX} ${centerY})`);
+
+    // interactive, you can hover ur mouse over to change the color
+    petal.addEventListener("mouseenter", () => petal.setAttribute("fill", "#d3aef1ff"));
+    svg.appendChild(petal);
+  });
+
+  // flower center
+    const center = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    center.setAttribute("cx", centerX);
+    center.setAttribute("cy", centerY);
+    center.setAttribute("r", 20);
+    center.setAttribute("fill", "#f3f59fff");
+    svg.appendChild(center);
+}
+
+drawFlower();

@@ -59,6 +59,7 @@ body {
   margin: 2rem 10rem;
   border-radius: 0.2rem;
   color: #ffffff;
+  text-decoration: none;
 }
 
 h1 {
@@ -74,7 +75,7 @@ h1 {
   padding: 10rem 30rem;
 }
 
-.education-skills-section p{
+.education-skills-section p {
   margin: 0 2rem;
 }
 
@@ -86,39 +87,39 @@ h3 {
 
 
 /*EXPERIENCE SECTION */
-#experience-section{
+#experience-section {
   display: flex;
   justify-content: center;
   padding: 10rem 17rem;
   background-color: #d1dab5;
 }
 
-.exp-img{
-  border:0.2rem solid #434d20;
-  border-radius: 0.2rem; 
-  width: 60rem;      
-  height: auto; 
+.exp-img {
+  border: 0.2rem solid #434d20;
+  border-radius: 0.2rem;
+  width: 60rem;
+  height: auto;
 }
 
-.exp-text-container{
+.exp-text-container {
   margin: 0 7rem;
 }
 
-.exp-text-container h4{
+.exp-text-container h4 {
   font-size: 2rem;
-  color:#1d1c1c;
-  
+  color: #1d1c1c;
+
 }
 
-.exp-text-container h5{
+.exp-text-container h5 {
   font-size: 2rem;
-  color:#1d1c1c;
-  
+  color: #1d1c1c;
+
 }
 
-.exp-description{
+.exp-description {
   margin: 2rem 0;
-  
+
 
 }
 
@@ -129,7 +130,7 @@ h3 {
 
 
 /*FOOTER CONTACT SECTION*/
-.footer-content{
+.footer-content {
   text-align: center;
   background-color: rgb(252, 232, 240);
   padding: 1.3rem 0;
@@ -139,13 +140,13 @@ h3 {
 
 /* Visualizations */
 
-.visBarGraph{
+.visBarGraph {
   display: grid;
   justify-content: center;
   margin: 2rem 0;
 }
 
-.visBarGraph h1{
+.visBarGraph h1 {
   text-align: center;
   font-size: 2rem;
 }
