@@ -82,7 +82,7 @@ h3 {
 
 
 /*EXPERIENCE SECTION */
-#experience-section {
+#experience-section, #experience-section2 {
   display: flex;
   justify-content: center;
   padding: 10rem 17rem;
@@ -185,7 +185,7 @@ h3 {
 
   
 
-  #experience-section{
+  #experience-section, #experience-section2{
     display: grid; 
     grid-template-columns: 1fr;
     padding: 4rem 3rem;
