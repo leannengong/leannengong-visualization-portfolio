@@ -164,9 +164,8 @@ h3 {
   grid-template-columns: 1fr;
 }
 
-/* navbar responsiveness 320px */
-
-@media(max-width:900px) {
+/* 900px */
+@media(max-width:56.25rem) {
   #about{
     display: grid;
     grid-template-columns: 1fr;
@@ -177,24 +176,67 @@ h3 {
   #about .visual-button{
     padding: 1rem 2rem;
     margin: 2rem 0;
+    margin-right: 19rem;
+  }
 
- 
+  .education-skills-section{
+    padding: 2rem 3rem;
+  }
+
+  
+
+  #experience-section{
+    display: grid; 
+    grid-template-columns: 1fr;
+    padding: 4rem 3rem;
+
+
+  }
+
+
 }
-@media(max-width:576px) {
+
+
+/* 576px */
+@media(max-width:36rem) {
   .main-nav{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+   .education-skills-section{
+    padding: 2rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+
+  .education-skills-section h3{
+   margin-top: 2rem;
+
+  }
+
+  .visBarGraph, .visDrawing{
+    margin: 3rem 2rem;
+  }
+
 }
 
-@media(max-width:325px) {
+/* 490px */
+@media(max-width:30.625rem) {
   .main-nav{
     display: grid;
     grid-template-columns: 1fr;
   }
-}
+
+    #about .visual-button{
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+  }
 
 }
+
+
 
 
 
