@@ -118,6 +118,32 @@ h3 {
 
 }
 
+/* vegalite  */
+.vis-title{
+  font-size: 2rem;
+  color:#3d3a3a;
+  display: grid;
+  justify-content: center;
+}
+
+.vega-container{
+  display: grid;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.scroll-x-container {
+    max-width: 50rem;
+    overflow-x: auto;
+    overflow-y: hidden; 
+}
+
+.vega-desc{
+  text-align: center;
+  max-width: 50rem;
+  margin-bottom: 2rem;
+}
 
 
 

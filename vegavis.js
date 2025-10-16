@@ -1,34 +1,38 @@
-// Load data from datasets/videogames_wide.csv using d3.csv and then make visualizations
+// Load data from datasets/videogames_wide.csv 
 async function fetchData() {
-  // Ensure the path is correct relative to your HTML file location
   const data = await d3.csv("./dataset/videogames_wide.csv");
   return data;
 }
 
+// Load data from datasets/videogames_long.csv 
+async function fetchDataLong() {
+  const dataLong = await d3.csv("./dataset/videogames_long.csv");
+  return dataLong;
+}
+
+//fetch the data 
 fetchData().then((data) => {
-  // Build the Vega-Lite specification using the vl API
+
+  // use vl API to build the vegalite
+  //visualization 1 Global Sales by Genre & Platform
   const vlSpec = vl
+    //from observable vega lite site 
     .markRect()
     .data(data)
     .encode(
       vl.x().fieldN("Genre"),
       vl.y().fieldN("Platform"),
-    vl.color()
-      .sum("Global_Sales") // <--- You already aggregate 'Global_Sales' here for color
+      vl.color()
+      .sum("Global_Sales") 
       .title("Global Sales (Millions)")
       .scale({ scheme: "purples" }),
 
     )
     .width({ step: 40 })
     .height({ step: 30 })
-    .toSpec(); // Use .toSpec() to get the final JSON object
+    .toSpec(); 
 
-  // Render the chart using the standard vegaEmbed function
-  // Pass the target div ID, the Vega-Lite spec, and options (like disabling actions)
-
-  //Remove the separate 'render' function, as vegaEmbed handles the rendering process.
-  // The 'vl.register' call in your HTML handles the necessary setup for the vl API.
-
+  //Visualization 2 - Sales Over Time by Platform & Genre
   const vlSpec2 = vl
   .markBar()
     .data(data)
@@ -36,7 +40,7 @@ fetchData().then((data) => {
       vl.x().fieldO("Year"),
       vl.y().sum("Global_Sales").title("Global Sales (Millions)"),
       vl.color().fieldN("Genre").scale({ scheme: "redpurple" }),
-      vl.column().fieldN("Platform"), // small multiples per platform
+      vl.column().fieldN("Platform"), 
       vl.tooltip([
         vl.fieldN("Genre"),
         vl.fieldN("Platform"),
@@ -46,11 +50,56 @@ fetchData().then((data) => {
     )
     .width(500)
     .height(500)
-    .toSpec(); // Convert to Vega-Lite JSON spec
+    .toSpec(); 
 
 
+  //render the visualizations
   render("#view", vlSpec);
   render("#view2", vlSpec2);
+
+
+});
+
+//we want to use long data for the last 2 visualizations
+//so we need to fetch it 
+fetchDataLong().then((dataLong) => {
+
+ //Visualization 3 - Regional Sales vs Platform
+  const vlSpec3 = vl
+    .markBar()
+    .data(dataLong) 
+    .encode(
+      vl.y().fieldN("platform"),
+      vl.x().sum("sales_amount").title("Sales (Millions)").type("quantitative"),
+      vl.color().fieldN("sales_region").title("Region").scale({ scheme: "lightmulti" }),
+      vl.tooltip([
+        vl.fieldN("platform"),
+        vl.fieldN("sales_region"),
+        vl.sum("sales_amount")
+      ])
+    )
+    .width(700)
+    .height(700)
+    .toSpec(); 
+
+    //Visualization 4 - Sales of Resident Evil Games from Each Region
+    const vlSpec4 = vl
+    .markBar() 
+    .data(dataLong.filter(d => typeof d.name === "string" && d.name.includes("Resident Evil")))
+    .encode(
+      vl.x().fieldN("name").title("Resident Evil Game"), 
+      vl.y().sum("sales_amount").title("Sales (Millions)"),
+      vl.color().fieldN("sales_region").title("Region").scale({scheme:"reds"}),
+      vl.tooltip([
+        vl.fieldN("name"), 
+        vl.fieldN("sales_region"), 
+        vl.fieldQ("sales_amount")])
+    
+    )
+    .toSpec();
+
+  render("#view3", vlSpec3);
+  render("#view4", vlSpec4);
 
 });
 
